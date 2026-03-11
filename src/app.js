@@ -7,7 +7,7 @@ const crearProducto = async () => {
   const producto2 = await Producto.create({ nombre: 'Mouse', precio: 45000.00 });
   const producto3 = await Producto.create({ nombre: 'Monitor', precio: 350000.00 });
   console.log('Productos creados:');
-  console.log(' -', producto1.dataValues);
+  console.log(' -', producto1.toJSON());// Tanto la funcion .ToJSON como .dataValues en este caso dan el mismo output
   console.log(' -', producto2.dataValues);
   console.log(' -', producto3.dataValues);
 };
